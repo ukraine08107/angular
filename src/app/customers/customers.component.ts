@@ -9,7 +9,9 @@ import {ICustomer} from "../shared/interfaces";
 export class CustomersComponent implements OnInit {
   title: string = "";
   people: ICustomer[] = [];
+  isVisible;
   constructor() {
+    this.isVisible = true;
   }
 
   ngOnInit(): void {
@@ -22,4 +24,7 @@ export class CustomersComponent implements OnInit {
     ];
   }
 
+  changeVisibility() {
+    this.isVisible = !this.isVisible;
+  }
 }
